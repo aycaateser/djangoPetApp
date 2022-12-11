@@ -1,0 +1,54 @@
+{#{% extends "homepage.html" %}#}
+{##}
+{#{% block title %}Anasayfa{% endblock %}#}
+{# {%  block content %}{#}
+{#{% load crispy_forms_tags %}#}
+{##}
+{##}
+{#    <form action="{% url "addpet" %}" enctype="multipart/form-data" method="POST">#}
+{#        {% csrf_token %}#}
+{#        <input id=""#}
+{#        <input id=""#}
+{##}
+{#        <input type="submit" class="btn btn-success" value="Create Pet">#}
+{#    </form>#}
+{##}
+<form class="form-horizontal" action='' method="POST" ENCTYPE="multipart/form-data">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="formFile" class="form-label">Please enter pet picture</label>
+        <input class="form-control" type="file" name="picture" id="picture">
+    </div>
+
+
+    <div class="form-group">
+        <label for="pet_type">Pet Type</label>
+        <input type="pet_type" class="form-control" name="pet_type" id="pet_type" aria-describedby="pet_type"
+               placeholder="Enter pet type">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+
+    <div class="form-group">
+        <label for="pet_genus">Pet Genus</label>
+        <input type="pet_genus" class="form-control" id="pet_genus" name="pet_genus" placeholder="pet genus">
+    </div>
+
+    <div class="form-group">
+        <label for="pet_name">pet_name</label>
+        <input type="pet_name" class="form-control" id="pet_name" name="pet_name" placeholder="pet name">
+    </div>
+
+    <div class="form-group">
+        <label for="pet_age">pet_age</label>
+        <input type="pet_age" class="form-control" id="pet_age" name="pet_age" placeholder="pet age">
+    </div>
+
+    <div class="form-group">
+        <label for="explanation">explanation</label>
+        <input type="explanation" class="form-control" id="explanation" name="explanation"
+               placeholder="pet explanation">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
