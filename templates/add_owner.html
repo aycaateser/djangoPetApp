@@ -1,0 +1,72 @@
+{#<form action="{% url "addowner" %}" enctype="multipart/form-data" method="POST">#}
+{#    {% csrf_token %}#}
+{#    <input id="name_surname" type="text" name="name_surname" value="{{ name_surname }}">#}
+{#    <input id="contact_infos" type="text" name="contact_infos" value="{{ contact_infos }}">#}
+{#    <input id="phone_number" type="text" name="phone_number" value="{{ phone_number }}">#}
+{#    <input id="email_field" type="text" name="email_field" value="{{ email_field }}">#}
+{#    <input id="pet" type="text" name="pet" value="{{ pet }}">#}
+{#    {{ form }}#}
+{#    <input type="submit" class="btn btn-success" value="Create Owner">#}
+{#</form>#}
+{##}
+{##}
+
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<form class="form-horizontal" action='' method="POST">
+    {% csrf_token %}
+  <fieldset>
+    <div id="legend">
+      <legend class="">Add Owner</legend>
+    </div>
+    <div class="control-group">
+
+      <label class="control-label" for="name_surname">name_surname</label>
+      <div class="controls">
+        <input type="text" id="name_surname" name="name_surname" placeholder="" class="input-xlarge">
+      </div>
+    </div>
+{% csrf_token %}
+    <div class="control-group">
+
+      <label class="control-label" for="contact_infos">contact_infos</label>
+      <div class="controls">
+        <input type="text" id="contact_infos" name="contact_infos" placeholder="" class="input-xlarge">
+        <p class="help-block">Please provide your E-mail</p>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <!-- Password-->
+      <label class="control-label" for="phone_number">Phone Number</label>
+      <div class="controls">
+        <input type="phone_number" id="phone_number" name="phone_number" placeholder="" class="input-xlarge">
+      </div>
+    </div>
+
+
+      <div class="control-group">
+      <label class="control-label" for="email">E-mail</label>
+      <div class="controls">
+        <input type="text" id="email" name="email" placeholder="" class="input-xlarge">
+        <p class="help-block">Please provide your E-mail</p>
+      </div>
+    </div>
+        <div class="control-group">
+      <label class="control-label" for="pet">Pet</label>
+      <div class="controls">
+        <input type="text" id="pet" name="pet" placeholder="" class="input-xlarge">
+
+      </div>
+    </div>
+
+    <div class="control-group">
+      <div class="controls">
+        <button class="btn btn-success">Add Owner
+        </button>
+      </div>
+    </div>
+  </fieldset>
+</form>
